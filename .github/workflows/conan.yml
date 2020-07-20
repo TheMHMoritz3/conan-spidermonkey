@@ -49,7 +49,7 @@ jobs:
       - name: Install Conan
         run: |
           pip install bincrafters_package_tools
-          pip install mozbuild
+          pip install mozbuild==0.2 
           conan user
           echo "::set-env name=CONAN_${{ matrix.config.compiler }}_VERSIONS::${{ matrix.config.version }}"
           echo "export CONAN_${{ matrix.config.compiler }}_VERSIONS=${{ matrix.config.version }}"
